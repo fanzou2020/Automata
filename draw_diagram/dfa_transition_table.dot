@@ -1,0 +1,15 @@
+digraph {
+	fake [style=invisible]
+	s3
+	s0 [root=true shape=doublecircle]
+	s1
+	s2
+	fake -> s0 [style=bold]
+	s0 -> s1 [label="5c"]
+	s0 -> s2 [label="10c"]
+	s1 -> s2 [label="5c"]
+	s1 -> s3 [label="10c"]
+	s2 -> s3 [label="5c"]
+	s2 -> s3 [label="10c"]
+	s3 -> s0 [label=gum]
+}

@@ -1,0 +1,23 @@
+{
+  "alphabet": [
+    "5c",
+    "10c",
+    "gum"
+  ],
+  "states": [
+    "s0",
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "initial_state": "s0",
+  "accepting_states": [
+    "s0"
+  ],
+  "transition_table": [
+    ["s1", "s2", ""],
+    ["s2", "s3", ""],
+    ["s3", "s3", ""],
+    ["", "", "s0"]
+  ]
+}
