@@ -36,7 +36,7 @@ def nfa_to_dfa(nfa_tb_file, output_filename):
                 dfa_states.append(x)
                 queue.append(x)
 
-    print(dfa_transition_table)
+    # print(dfa_transition_table)
 
     # dfa accepting states, if the intersection between dfa_states and nfa accepting states
     # is not empty, then add it to dfa accepting states
@@ -45,7 +45,7 @@ def nfa_to_dfa(nfa_tb_file, output_filename):
         if len(set(nfa_accepting).intersection(x)) != 0:
             dfa_accepting.append(x)
 
-    print(dfa_accepting)
+    # print(dfa_accepting)
 
     dfa = dict()
     dfa["alphabet"] = alphabet
