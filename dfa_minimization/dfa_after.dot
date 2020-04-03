@@ -1,0 +1,19 @@
+digraph {
+	fake [style=invisible]
+	"{'C'}" [shape=doublecircle]
+	"{'G'}"
+	"{'F', 'D'}"
+	"{'B', 'H'}"
+	"{'E', 'A'}" [root=true]
+	fake -> "{'E', 'A'}" [style=bold]
+	"{'E', 'A'}" -> "{'B', 'H'}" [label=0]
+	"{'E', 'A'}" -> "{'F', 'D'}" [label=1]
+	"{'B', 'H'}" -> "{'G'}" [label=0]
+	"{'B', 'H'}" -> "{'C'}" [label=1]
+	"{'C'}" -> "{'E', 'A'}" [label=0]
+	"{'C'}" -> "{'C'}" [label=1]
+	"{'F', 'D'}" -> "{'C'}" [label=0]
+	"{'F', 'D'}" -> "{'G'}" [label=1]
+	"{'G'}" -> "{'G'}" [label=0]
+	"{'G'}" -> "{'E', 'A'}" [label=1]
+}

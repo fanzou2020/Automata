@@ -1,6 +1,8 @@
 import json
 
 
+# input the json file of a nfa transition table, and the file name of excepted output
+# dfa transition table json file name, this function will create a json file with output_filename
 def nfa_to_dfa(nfa_tb_file, output_filename):
     with open(nfa_tb_file) as json_file:
         nfa = json.load(json_file)

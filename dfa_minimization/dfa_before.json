@@ -1,0 +1,30 @@
+{
+  "alphabet": [
+    "0",
+    "1"
+  ],
+  "states": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+  ],
+  "initial_state": "A",
+  "accepting_states": [
+    "C"
+  ],
+  "transition_table": [
+    ["B", "F"],
+    ["G", "C"],
+    ["A", "C"],
+    ["C", "G"],
+    ["H", "F"],
+    ["C", "G"],
+    ["G", "E"],
+    ["G", "C"]
+  ]
+}
