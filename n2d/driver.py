@@ -1,4 +1,4 @@
-from n2d import nfa_to_dfa
+from n2d import NFA2DFA
 from draw_diagram import tb_to_diagram
 from PySimpleAutomata import automata_IO
 from PySimpleAutomata import NFA
@@ -7,7 +7,7 @@ from PySimpleAutomata import NFA
 tb_to_diagram.nfa_tb_to_diagram("nfa_transition_table.json", "nfa_transition_table")
 
 # transform nfa to dfa
-nfa_to_dfa.nfa_to_dfa("nfa_transition_table.json", "dfa_transition_table.json")
+NFA2DFA.nfa_to_dfa("nfa_transition_table.json", "dfa_transition_table.json")
 
 # draw diagram of dfa
 tb_to_diagram.dfa_tb_to_diagram("dfa_transition_table.json", "dfa_transition_table")
@@ -18,11 +18,12 @@ dfa = NFA.nfa_determinization(nfa)
 automata_IO.dfa_to_dot(dfa, "dfa_pysimpleautoma")
 
 
+# Another example
 # draw diagram of nfa
 tb_to_diagram.nfa_tb_to_diagram("nfa_test_tb.json", "nfa_test_tb")
 
 # transform nfa to dfa
-nfa_to_dfa.nfa_to_dfa("nfa_test_tb.json", "dfa_test_tb.json")
+NFA2DFA.nfa_to_dfa("nfa_test_tb.json", "dfa_test_tb.json")
 
 # draw diagram of dfa
 tb_to_diagram.dfa_tb_to_diagram("dfa_test_tb.json", "dfa_test_tb")
