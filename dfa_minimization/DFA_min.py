@@ -76,21 +76,24 @@ def dfa_minimization(dfa_before_filename, dfa_after_filename):
     for i in range(len(after_states)):
         for j in range(len(after_states[i])):
             after_states[i][j] = before_states[after_states[i][j]]
-        after_states[i] = str(set(after_states[i]))
-    dfa_after["states"] = after_states
+        # after_states[i] = str(set(after_states[i]))
+    after_states_str = []
+    for i in range(len(after_states)):
+        after_states_str.append(str(set(after_states[i])))
+    dfa_after["states"] = after_states_str
 
     after_initial = []
     for x in after_states:
         if before_initial in x:
             after_initial = x
             break
-    dfa_after["initial_state"] = after_initial
+    dfa_after["initial_state"] = str(set(after_initial))
 
     # if the intersection with accepting states is not empty, it is the new accepting states
     after_accepting = []
     for x in after_states:
         if len(set(before_accepting).intersection(set(x))) != 0:
-            after_accepting.append(x)
+            after_accepting.append(str(set(x)))
     dfa_after["accepting_states"] = after_accepting
 
     for i in range(len(tb)):
