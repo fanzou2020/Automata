@@ -1,10 +1,10 @@
 digraph {
 	fake [style=invisible]
-	"{'C'}" [shape=doublecircle]
 	"{'G'}"
 	"{'F', 'D'}"
-	"{'B', 'H'}"
+	"{'C'}" [shape=doublecircle]
 	"{'E', 'A'}" [root=true]
+	"{'B', 'H'}"
 	fake -> "{'E', 'A'}" [style=bold]
 	"{'E', 'A'}" -> "{'B', 'H'}" [label=0]
 	"{'E', 'A'}" -> "{'F', 'D'}" [label=1]
