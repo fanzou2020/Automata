@@ -39,7 +39,11 @@ tb_to_diagram.nfa_tb_to_diagram("nfa_transition_table.json", "nfa_transition_tab
 
 tb_to_diagram.dfa_tb_to_diagram("dfa_transition_table.json", "dfa_transition_table")
 
+tb_to_diagram.nfa_tb_to_diagram("example1.json", "example1")
 
+tb_to_diagram.dfa_tb_to_diagram("example2.json", "example2")
+
+tb_to_diagram.dfa_tb_to_diagram("example3.json", "example3")
 
 
 
